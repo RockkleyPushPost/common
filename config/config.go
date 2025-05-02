@@ -1,15 +1,13 @@
 package config
 
 import (
-	"gopkg.in/yaml.v3"
 	"os"
-	"pushpost/pkg/database"
 )
 
 type Config struct {
-	Database  *database.Config `json:"database" yaml:"database"`
-	JwtSecret string           `json:"jwt_secret" yaml:"jwt_secret"`
-	Server    ServerConfig     `json:"server" yaml:"server"`
+	Database  *DBConfig    `json:"database" yaml:"database"`
+	JwtSecret string       `json:"jwt_secret" yaml:"jwt_secret"`
+	Server    ServerConfig `json:"server" yaml:"server"`
 }
 
 type ServerConfig struct {

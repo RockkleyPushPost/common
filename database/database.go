@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type Config struct {
+type DBConfig struct {
 	Host     string `yaml:"host"`
 	User     string `yaml:"user"`
 	Password string `yaml:"password"`
@@ -16,7 +16,7 @@ type Config struct {
 	Schema   string `yaml:"schema"`
 }
 
-func (c *Config) Validate() error {
+func (c *DBConfig) Validate() error {
 	if c.Host == "" {
 		return errors.New("missing host")
 	}
@@ -34,7 +34,7 @@ func (c *Config) Validate() error {
 	}
 	return nil
 }
-func NewDatabase(config Config) (*gorm.DB, error) {
+func NewDatabase(config DBConfig) (*gorm.DB, error) {
 	if err := config.Validate(); err != nil {
 
 		return nil, err
@@ -53,7 +53,7 @@ func NewDatabase(config Config) (*gorm.DB, error) {
 
 }
 
-func getDsnFromConfig(config Config) string {
+func getDsnFromConfig(config DBConfig) string {
 
 	return fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s search_path=%s",
 		config.Host, config.User, config.Password, config.DbName, config.Port, config.Schema)
