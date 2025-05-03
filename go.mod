@@ -1,9 +1,8 @@
-module github.com/ockkleyushost/common
+module github.com/RockkleyPushPost/common
 
 go 1.23.2
 
 require (
-	github.com/RockkleyPushPost/common v0.0.0-20250503114409-dda4e0de0314
 	github.com/gofiber/fiber/v2 v2.52.6
 	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/google/uuid v1.6.0
