@@ -1,10 +1,10 @@
 package middleware
 
 import (
+	"github.com/RockkleyPushPost/common/jwt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"log"
-	"pushpost/jwt"
 	"strings"
 )
 

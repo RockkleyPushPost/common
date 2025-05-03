@@ -1,8 +1,8 @@
 package fiber
 
 import (
+	"github.com/RockkleyPushPost/common/config"
 	"github.com/gofiber/fiber/v2"
-	"pushpost/config"
 )
 
 func NewFiber(config config.ServerConfig) (*fiber.App, error) {

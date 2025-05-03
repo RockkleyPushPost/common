@@ -2,9 +2,9 @@ package config
 
 import (
 	"errors"
+	"github.com/RockkleyPushPost/common/database"
 	"gopkg.in/yaml.v3"
 	"os"
-	"pushpost/database"
 )
 
 type Config struct {

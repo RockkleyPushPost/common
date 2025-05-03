@@ -3,9 +3,9 @@ package di
 import (
 	"errors"
 	"fmt"
+	"github.com/RockkleyPushPost/common/middleware"
 	"github.com/gofiber/fiber/v2"
 	"log"
-	"pushpost/middleware"
 	"reflect"
 	"strings"
 	"sync"
