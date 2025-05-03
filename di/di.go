@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"log"
-	"pushpost/pkg/middleware"
+	"pushpost/middleware"
 	"reflect"
 	"strings"
 	"sync"

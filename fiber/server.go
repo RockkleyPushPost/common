@@ -2,7 +2,7 @@ package fiber
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"pushpost/internal/config"
+	"pushpost/config"
 )
 
 func NewFiber(config config.ServerConfig) (*fiber.App, error) {

@@ -1,13 +1,16 @@
 package config
 
 import (
+	"errors"
+	"gopkg.in/yaml.v3"
 	"os"
+	"pushpost/database"
 )
 
 type Config struct {
-	Database  *DBConfig    `json:"database" yaml:"database"`
-	JwtSecret string       `json:"jwt_secret" yaml:"jwt_secret"`
-	Server    ServerConfig `json:"server" yaml:"server"`
+	Database  *database.DBConfig `json:"database" yaml:"database"`
+	JwtSecret string             `json:"jwt_secret" yaml:"jwt_secret"`
+	Server    ServerConfig       `json:"server" yaml:"server"`
 }
 
 type ServerConfig struct {
@@ -44,16 +47,16 @@ func LoadYamlConfig(path string) (*Config, error) {
 	//return &config, nil
 }
 
-//func (c *ServerConfig) Validate() error {
-//	if c.Host == "" {
-//
-//		return errors.New("missing host")
-//	}
-//
-//	if c.Port == "" {
-//
-//		return errors.New("missing port")
-//	}
-//
-//	return nil
-//}
+func (c *ServerConfig) Validate() error {
+	if c.Host == "" {
+
+		return errors.New("missing host")
+	}
+
+	if c.Port == "" {
+
+		return errors.New("missing port")
+	}
+
+	return nil
+}

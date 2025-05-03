@@ -4,7 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"log"
-	"pushpost/pkg/jwt"
+	"pushpost/jwt"
 	"strings"
 )
 
