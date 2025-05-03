@@ -1,4 +1,4 @@
-module pushpost
+module github.com/RockkleyPushPost/common
 
 go 1.23.2
 
