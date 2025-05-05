@@ -8,9 +8,10 @@ import (
 )
 
 type Config struct {
-	Database  *database.DBConfig `json:"database" yaml:"database"`
-	JwtSecret string             `json:"jwt_secret" yaml:"jwt_secret"`
-	Server    ServerConfig       `json:"server" yaml:"server"`
+	Database    *database.DBConfig `json:"database" yaml:"database"`
+	JwtSecret   string             `json:"jwt_secret" yaml:"jwt_secret"`
+	Server      ServerConfig       `json:"server" yaml:"server"`
+	ServiceName string             `json:"serviceName" yaml:"serviceName"`
 }
 
 type ServerConfig struct {
