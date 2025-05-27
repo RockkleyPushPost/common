@@ -20,6 +20,11 @@ type ServerConfig struct {
 }
 
 func LoadYamlConfig(path string) (*Config, error) {
+	if path == "" {
+
+		return nil, errors.New("no yaml config path provided")
+	}
+
 	cfg := &Config{}
 
 	file, err := os.ReadFile(path)
