@@ -34,6 +34,7 @@ func (c *DBConfig) Validate() error {
 	}
 	return nil
 }
+
 func NewDatabase(config DBConfig) (*gorm.DB, error) {
 	if err := config.Validate(); err != nil {
 
